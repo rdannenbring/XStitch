@@ -1,6 +1,6 @@
 # XStitch Chrome Extension
 
-[![Available in the Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/i6J9k2uFca4kQv2gC1c4.png)](https://chromewebstore.google.com/detail/xstitch/gdjghcmfppmabmcimolmldhhadknjmme)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/xstitch/gdjghcmfppmabmcimolmldhhadknjmme)
 
 XStitch is the ultimate companion for your **vibe coding** workflow. Designed to bridge the gap between Google Stitch and your local development environment, it allows you to seamlessly capture, preview, and export individual, multiple, or all screen designs and code snippets from Stitch directly to your "XStitch Clipboard"—keeping you in the flow and focused on the creative process.
 
