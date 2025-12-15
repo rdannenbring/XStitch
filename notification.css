@@ -1,0 +1,100 @@
+/* XStitch Notification Overlay */
+.xstitch-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    animation: xstitch-slide-in 0.3s ease-out, xstitch-fade-out 0.3s ease-in 19.7s;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    user-select: none;
+}
+
+.xstitch-notification:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.xstitch-notification-icon {
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.xstitch-notification-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.xstitch-notification-title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.xstitch-notification-message {
+    font-size: 12px;
+    opacity: 0.95;
+}
+
+.xstitch-notification-close {
+    margin-left: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.xstitch-notification-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes xstitch-slide-in {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes xstitch-fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

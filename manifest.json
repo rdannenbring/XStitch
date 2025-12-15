@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "XStitch",
+  "version": "1.3.1",
+  "description": "Export individual screen designs from Google Stitch to the XStitch Clipboard for easy access and sharing.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "clipboardWrite",
+    "clipboardRead",
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://stitch.withgoogle.com/*",
+        "https://*.appspot.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "notification.css"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "action": {
+    "default_title": "Open XStitch Clipboard"
+  },
+  "options_page": "options.html",
+  "host_permissions": [
+    "https://stitch.withgoogle.com/*",
+    "https://*.appspot.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "inject.js",
+        "icons/*.png",
+        "monaco/*"
+      ],
+      "matches": [
+        "https://stitch.withgoogle.com/*",
+        "https://*.appspot.com/*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Stitch to Studio Bridge",
+  "description": "A seamless bridge to export designs and import them directly into an AI Studio project chat for analysis and code generation.",
+  "requestFramePermissions": []
+}
